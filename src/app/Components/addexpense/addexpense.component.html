@@ -1,0 +1,32 @@
+<div fxFlex="50" fxFlexOffset="200px">
+<form novalidate (ngSubmit)="saveExpense()">
+  <h1 matLine>Add Expenses</h1>
+  <p>
+    <mat-form-field>
+      <mat-select class="form-control" [(value)]="expense.expense">
+        <mat-option *ngFor="let exp of category" [value]="exp.value">
+          {{exp.text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+  <mat-form-field>
+    <input matInput name="amount" placeholder="Amount" [(ngModel)]="expense.amount">
+  </mat-form-field>
+  </p>
+ <p>
+   <mat-form-field>
+     <input matInput type="date" name="date" [(ngModel)]="expense.expense_date" placeholder="Select Date">
+   </mat-form-field>
+ </p>
+ <p>
+  <mat-form-field>
+   <textarea matInput name="description" [(ngModel)]="expense.description" placeholder="Enter Description" rows="10"></textarea>
+ </mat-form-field>
+</p>
+<p>
+  <button mat-button type="submit" class="btn btn-success" style="width:50%;">Add Expense</button>
+</p>
+</form>
+</div>

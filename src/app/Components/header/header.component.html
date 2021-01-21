@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
+  <a mat-button routerLink="/addexpense" routerLinkActive="active"><mat-icon> attach_money</mat-icon> Add Details</a>
+  <a mat-button routerLink="/expenses" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> All Details</a>
+  <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+</mat-toolbar>
+
+<div class="container jumbotron"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center"
+    fxLayoutAlign.gt-sm="center center"
+    fxLayoutGap="10px">
+
+  <div fxFlex fxFlex.gt-sm="50%">
+    <mat-divider></mat-divider>
+    <h1 class="heading">Expense Tracker</h1>
+    <mat-divider></mat-divider>
+    <h3 class="heading" matLine>Manage your expenses directly on Website.</h3>
+    <h3 class="heading" matLine>Easily keep track of your finances.</h3>
+  </div>
+</div>

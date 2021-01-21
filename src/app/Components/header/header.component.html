@@ -1,8 +1,10 @@
 <mat-toolbar color="primary">
   <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
-  <a mat-button routerLink="/addexpense" routerLinkActive="active"><mat-icon> attach_money</mat-icon> Add Details</a>
+  <a mat-button (click)="openExpenseForm()"><mat-icon> attach_money</mat-icon> Add Details</a>
   <a mat-button routerLink="/expenses" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> All Details</a>
   <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+  <span class="flex-spacer"></span>
+  <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>
 </mat-toolbar>
 
 <div class="container jumbotron"

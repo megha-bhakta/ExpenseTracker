@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Expensetracker } from 'src/app/Model/expensetracker';
 import { ExpenseService } from 'src/app/Service/expense.service';
+import { MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-addexpense',
@@ -27,7 +28,8 @@ export class AddexpenseComponent implements OnInit {
 
   constructor(private _expenseService: ExpenseService,
               private _router: Router,
-              private _activatedRoute: ActivatedRoute) { }
+              private _activatedRoute: ActivatedRoute,
+              public dialog: MatDialogRef<AddexpenseComponent>) { }
 
   ngOnInit(): void {
      const isIdPresent = this._activatedRoute.snapshot.paramMap.has('id');
@@ -44,7 +46,7 @@ export class AddexpenseComponent implements OnInit {
     this._expenseService.saveExpense(this.expense).subscribe(
       data => {
         console.log('response', data);
-        this._router.navigateByUrl("/expenses");
+        this.dialog.close();
       }
     )
   }
